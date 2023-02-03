@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.testng', name: 'testng', version: '7.7.1'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '5.1.1'
+    testImplementation group: 'org.mockito', name: 'mockito-inline', version: '5.1.1'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.24.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+sourceCompatibility = JavaVersion.VERSION_19
+targetCompatibility = JavaVersion.VERSION_19
